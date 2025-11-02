@@ -1,0 +1,81 @@
+{
+    "name": "ianm/boring-avatars",
+    "description": "Replace default Flarum avatars with Boring Avatars.",
+    "keywords": [
+        "flarum"
+    ],
+    "type": "flarum-extension",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/imorland/flarum-ext-boring-avatars/issues",
+        "source": "https://github.com/imorland/flarum-ext-boring-avatars",
+        "forum": "https://discuss.flarum.org/d/33989"
+    },
+    "funding": [
+        {
+            "url": "https://www.buymeacoffee.com/ianm1"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "flarum/core": "^2.0.0-beta",
+        "enshrined/svg-sanitize": "*"
+    },
+    "authors": [
+        {
+            "name": "IanM",
+            "email": "ian@flarum.org",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "IanM\\BoringAvatars\\": "src/"
+        }
+    },
+    "extra": {
+        "flarum-extension": {
+            "title": "Boring Avatars",
+            "category": "",
+            "icon": {
+                "image": "assets/logo.svg",
+                "backgroundColor": "#FECC4D",
+                "backgroundSize": "100%",
+                "backgroundRepeat": "no-repeat",
+                "backgroundPosition": "center"
+            }
+        },
+        "flarum-cli": {
+            "modules": {
+                "admin": true,
+                "forum": true,
+                "js": true,
+                "jsCommon": true,
+                "css": true,
+                "locale": true,
+                "gitConf": true,
+                "githubActions": true,
+                "prettier": true,
+                "typescript": true,
+                "bundlewatch": false,
+                "backendTesting": false,
+                "editorConfig": true,
+                "styleci": false
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "fof/oauth": "*",
+        "flarum/phpstan": "^2.0.0-beta",
+        "flarum/gdpr": "*"
+    },
+    "scripts": {
+        "analyse:phpstan": "phpstan analyse",
+        "clear-cache:phpstan": "phpstan clear-result-cache"
+    },
+    "scripts-descriptions": {
+        "analyse:phpstan": "Run static analysis"
+    }
+}
